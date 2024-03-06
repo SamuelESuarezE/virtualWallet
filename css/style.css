@@ -3,11 +3,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "SF-Pro-Text-Regular";
+    font-family: "SF-Pro-Text-BOLD";
 }
+
 body {
+    display: flex;
+    flex-direction: column;
     width: 100vw;
-    height: 100vh;
+    height: 92vh;
+}
+
+body img:first-child {
+    position: absolute;
+    width: 100vw;
+    z-index: -1;
 }
 
 /* Header */
@@ -20,8 +29,7 @@ header {
     height: 60px;
     width: 100%;
     padding-inline: 20px;
-    color: var(--color-secundary);
-    overflow: hidden;
+    color: #ffff;
 }
 
 .logoName {
@@ -33,7 +41,7 @@ header {
 }
 
 header a {
-    color: var(--color-secundary);;
+    color: #ffff;;
 }
 
 header i {
@@ -42,4 +50,34 @@ header i {
 
 .container {
     height: 82%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Circle Balance */
+
+.circle {
+    display: grid;
+    place-content: center;
+    margin-top: 65px;
+    background-color: var(--color-primary);
+    height: 230px;
+    width: 230px;
+    border-radius: 100%;
+    text-align: center;
+    color: #ffff
+    ;
+}
+
+
+.circle p {
+    font-size: 30px;
+    width: 200px;
+}
+.circle span {
+    font-size: 30px;
+}
+
+.circle dollar {
+    font-size: 20px;
 }
