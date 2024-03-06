@@ -5,3 +5,41 @@
     box-sizing: border-box;
     font-family: "SF-Pro-Text-Regular";
 }
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Header */
+
+header {
+    font-size: 0.6em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    width: 100%;
+    padding-inline: 20px;
+    color: var(--color-secundary);
+    overflow: hidden;
+}
+
+.logoName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: 2px;
+}
+
+header a {
+    color: var(--color-secundary);;
+}
+
+header i {
+    font-size: 35px;
+}
+
+.container {
+    height: 82%;
+}
