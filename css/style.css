@@ -9,7 +9,6 @@
 body {
     width: 100vw;
     height: 92vh;
-    
 }
 
 /* Header */
@@ -19,7 +18,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 6%;
+    height: 60px;
     width: 100%;
     padding-inline: 20px;
     color: var(--color-secundary);
@@ -43,14 +42,13 @@ header i {
 }
 
 .container {
-    height: 84%;
+    height: 82%;
 }
 
 /* Investing Tips */
 
 .tips {
     height: 35%;
-    background-color: red;
     display: flex;
     flex-direction: column;
     padding: 10px 20px;
@@ -63,22 +61,119 @@ header i {
 }
 
 .tipsBox {
+    position: relative;
     gap: 12px;
     border-radius: 20px;
     height: 80%;
     display: flex;
     align-items: center;
-    background: lightcoral;
+    box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.291);
 }
 
 .tipsBox .data {
     display: flex;
     letter-spacing: -1px;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
 }
+
+.tipsBox .data h2 {
+    font-size: 16px;
+}
+
+.tipsBox .data p {
+    font-size: 14px;
+    color: rgb(186, 186, 186);
+    font-family: "SF-Pro-Text-Regular";
+}
+
+.tipsBox .data button {
+    margin-top: 10px;
+    border: none;
+    background-color: var(--color-primary);
+    color: var(--color-buttonFont);
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    padding-block: 10px;
+    
+    border-radius: 20px;
+    cursor: pointer;
+    width: 30vw;
+}
+
+.tipsBox img:last-child {
+    height: 7vw;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+/* Cards */
 
 .cards {
     height: 70%;
-    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    gap: 10px;
+}
+
+.cards span:first-child {
+    color: var(--color-primary);
+}
+
+.carrusel {
+    width: 100%;
+    height: auto;
+    display: flex;
+    overflow: scroll;
+    overflow-y: hidden;
+    gap: 10px;
+}
+
+.card1, .card2 {
+    position: relative;
+    justify-content: space-between;
+    flex: 1 0 auto;
+    background-size: cover;
+    width: 55vw;
+    height: 45vh;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    color: var(--color-buttonFont);
+}
+
+.card1 :nth-child(2), .card2 :nth-child(2) {
+    font-size: 30px;
+}
+
+.card1 small, .card2 small {
+    position: absolute;
+    font-family: "SF-Pro-Text-Regular";
+    top: 25px;
+    right: 25px;
+
+}
+
+.card1 span, .card2 span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card1 img, .card2 img {
+    position: absolute;
+    bottom: 25px;
+    left: 20px;
+    height: 30px;
+}
+
+.card1 {
+    background-image: url(../storage/img/card.svg);
+}
+
+.card2 {
+    background-image: url(../storage/img/cardLoad.svg);
 }
