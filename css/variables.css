@@ -10,4 +10,7 @@
 :root{
     --color-primary: #00DDA3;
     --color-secundary: #33404F;
+    --color-font: #ffff;
+    --color-gray: #a8a8a87a;
+    --color-popUp: #E1FFEF;
 }
