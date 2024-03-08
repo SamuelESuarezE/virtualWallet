@@ -48,7 +48,9 @@ header i {
     font-size: 35px;
 }
 
-
+header h1 {
+    font-size: 2em;
+}
 /* Circle Balance */
 
 
