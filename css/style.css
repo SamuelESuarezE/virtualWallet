@@ -3,5 +3,210 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "SF-Pro-Text-Bold";
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background: var(--color-secundary);
+    overflow-x: hidden;
+}
+
+#fondoLineas {
+    z-index: -1;
+    position: absolute;
+    object-fit: contain;
+    width: 100vw;
+}
+
+/* Header */
+
+header {
+    font-size: 0.6em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    width: 100%;
+    padding-inline: 20px;
+    color: #ffff;
+    }
+    
+.logoName {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+letter-spacing: 2px;
+}
+
+header a {
+color: #ffff;;
+}
+
+header i {
+font-size: 35px;
+}
+
+/* User */
+
+.user {
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 20px;
+    color: var(--color-font);
+}
+
+.user #balanceText {
+    font-family: "SF-Pro-Text-Light";
+    letter-spacing: 2px;
+    font-size: 2em;
+}
+
+.user h1 {
+    font-size: 2em;
+}
+
+/* Progress Bars */
+
+.progressBars {
+    margin-top: 20px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.savings, .assets {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
     font-family: "SF-Pro-Text-Regular";
+}
+
+.savings p, .assets p {
+    font-size: 1.5em;
+}
+
+.savings small, .assets small {
+    font-family: "SF-Pro-Text-Regular"
+}
+
+dollar {
+    font-size: 0.6em;
+}
+
+.progress {
+    margin-top: 5px;
+    height: 8px;
+    border-radius: 10px;
+    background-color: #ffff;
+}
+
+.progressFill1 {
+    border-radius: 10px;
+    height: 100%;
+    width: 80%;
+    background-color: var(--color-primary);
+}
+
+.progressFill2 {
+    border-radius: 10px;
+    height: 100%;
+    width: 40%;
+    background-color: var(--color-gray);
+}
+
+/* activities & transactions */
+
+.activitiesTransactions {
+    flex: 1;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    margin-top: 10px;
+    border-radius: 50px 50px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 58vh;
+    background-color: #Ffff;
+    color: var(--color-secundary);
+    padding-inline: 30px
+}
+
+
+.activities {
+    flex: 0.8;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.activity {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    min-height: 120px;
+    box-shadow: 0px 0px 5px rgb(222, 222, 222);
+}
+
+.transactions {
+    box-sizing: border-box;
+    flex: 1;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    overflow: scroll;
+    scrollbar-color: transparent;
+    justify-self: center;
+    width: 100%;
+}
+
+.transaction {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    height: 80px;
+}
+
+.transactionLeft {
+    display: flex;
+    gap: 5px;
+}
+
+.transaction img{
+
+    width: 50px;
+}
+
+.transactionDescription, .transactionValue{
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    padding: 5px;
+
+}
+
+.transactionValue {
+    align-items: end;
+}
+
+.transactionDescription b, .transactionValue b{
+    font-size: 1.2em;
+}
+
+.transactionDescription small, .transactionValue small{
+    color: var(--color-gray)
 }
