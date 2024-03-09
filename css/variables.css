@@ -1,5 +1,7 @@
 :root{
-    --color-primary: #6451FC;
-    --color-secundary: #020D19;
-    --color-icons: #ffffff;
+    --color-purple: #6451FC;
+    --color-background: #070707;
+    --color-gray: #6C757D;
+    --color-menunav: #121212;
+    --color-white: #ffffff;
 }
