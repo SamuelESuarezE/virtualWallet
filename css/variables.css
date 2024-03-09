@@ -1,14 +1,17 @@
 @font-face {
-    font-family: "SF-Pro-Text-Regular";
-    src: url(../storage/fonts/SF-Pro-Text-Font-Family/SF-Pro-Text-Regular.otf);
+    font-family: "Regular";
+    src: url(../storage/fonts/Poppins/Poppins-Regular.ttf);
 }
 
 @font-face {
-    font-family: "SF-Pro-Text-Bold";
-    src: url(../storage/fonts/SF-Pro-Text-Font-Family/SF-Pro-Text-Bold.otf);
+    font-family: "Bold";
+    src: url(../storage/fonts/Poppins/Poppins-Bold.ttf);
 }
+
 :root{
-    --color-primary: #00DDA3;
-    --color-secundary: #33404F;
-    --color-buttonFont: #ffff;
+    --color-purple: #6451FC;
+    --color-background: #070707;
+    --color-gray: #6C757D;
+    --color-menunav: #121212;
+    --color-white: #ffffff;
 }

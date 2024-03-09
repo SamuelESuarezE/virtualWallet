@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INVETO</title>
+    <title>Cryptonaut</title>
     <script src="js/app.js" type="module" defer></script>
-    <link rel="shortcut icon" href="./storage/img/icono0.svg" type="image/svg">
+    <link rel="shortcut icon" href="./storage/img/iconoShortcut.svg" type="image/svg">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/style.css">
     
@@ -13,23 +13,41 @@
 <body>
     <header>
         <div class="logoName">
-            <i class='bx bx-wallet'></i>
-            <h1>INVETO</h1>
+            <svg fill="#00000" height="30" viewBox="0 -0.3 47.6 47.6" id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M45.55,8.31a3.32,3.32,0,1,1,4.22,3.2v8.55H48V11.51A3.36,3.36,0,0,1,45.55,8.31Z" transform="translate(-4.57 -5)"></path><path d="M35.31,7.47v8.68C41,18.62,45,23.86,45,30c0,8.43-7.6,13.25-16.88,13.25S11.2,38.38,11.2,30c0-6.09,4-11.33,9.64-13.8V7.47c-7.77,3-12,11-12,20.31,0,12,8.62,18.8,19.28,18.8s19.29-6.81,19.29-18.8C47.36,18.44,43.08,10.48,35.31,7.47Z" transform="translate(-4.57 -5)"></path><path d="M34.1,15.67V7.05a21.51,21.51,0,0,0-6-.91,19.52,19.52,0,0,0-6,.91v8.62a18.14,18.14,0,0,1,12.05,0Z" transform="translate(-4.57 -5)"></path><path d="M24.4,17.83a14.36,14.36,0,0,0-8.92,6.93.6.6,0,0,0,.36.85l2.65.84a.66.66,0,0,0,.73-.3,9.9,9.9,0,0,1,6.2-4.94.66.66,0,0,0,.43-.72l-.67-2.23A.59.59,0,0,0,24.4,17.83Z" transform="translate(-4.57 -5)"></path><path d="M4.57,30.31v1.2a3,3,0,0,0,3,3h1a19.61,19.61,0,0,1-.84-4.22Z" transform="translate(-4.57 -5)"></path><path d="M7.59,27.78a28.48,28.48,0,0,1,.72-6.51H7.59a3,3,0,0,0-3,3V29.1h3Z" transform="translate(-4.57 -5)"></path><path d="M47.6,34.53h1a3,3,0,0,0,3-3v-1.2H48.44A19.61,19.61,0,0,1,47.6,34.53Z" transform="translate(-4.57 -5)"></path><path d="M48.56,21.27h-.72a28.48,28.48,0,0,1,.72,6.51,10.17,10.17,0,0,1-.06,1.32h3V24.28A2.89,2.89,0,0,0,48.56,21.27Z" transform="translate(-4.57 -5)"></path><path d="M42.42,43.44a21.89,21.89,0,0,1-14.35,4.94,21.89,21.89,0,0,1-14.34-4.94l-.84.85a.57.57,0,0,0-.06.78c3.56,4.52,9,6.93,15.24,6.93s11.69-2.41,15.25-6.93a.56.56,0,0,0-.06-.78Z" transform="translate(-4.57 -5)"></path></g></svg>
+            <h1>CRYPTONAUT</h1>
         </div>
-        <a href="#"><i class='bx bx-menu' ></i></a>
+        <!-- <a href="#"><i class='bx bx-menu' ></i></a> -->
     </header>
     <main class="container">
         <section class="tips">
             <h2>Investing Tips</h2>
-            <div class="tipsBox">
-                <img src="./storage/img/icono0.svg" alt="">
-                <div class="data">
-                    <h2>What is an ETF?</h2>
-                    <p>By James B, PHD</p>
-                    <button>LEARN MORE</button>
+            <div class="tipsCarrusel">
+                <div class="tipsBox">
+                    <img src="./storage/img/tipsImg.png" alt="">
+                    <div class="data">
+                        <h2>What is an NTF?</h2>
+                        <p>By Rakesh Sharma</p>
+                        <button>LEARN MORE</button>
+                    </div>
                 </div>
-                <img src="./storage/img/circleX.svg" alt="">
+                <div class="tipsBox">
+                    <img src="./storage/img/tipsImg2.png" alt="">
+                    <div class="data">
+                        <h2>What is an NTF?</h2>
+                        <p>By Rakesh Sharma</p>
+                        <button>LEARN MORE</button>
+                    </div>
+                </div>
+                <div class="tipsBox">
+                    <img src="./storage/img/tipsImg3.png" alt="">
+                    <div class="data">
+                        <h2>What is an NTF?</h2>
+                        <p>By Rakesh Sharma</p>
+                        <button>LEARN MORE</button>
+                    </div>
+                </div>
             </div>
+
         </section>
         <section class="cards">
             <h2>My Cards (<span>6</span>)</h2>
@@ -67,6 +85,19 @@
             </div>
         </section>
     </main>
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="./views/balance.html"><i class='bx bx-money' ></i></a>
+            </li>
+            <li>
+                <a href="index.html"><i class='bx bxs-home' ></i></a>
+            </li>
+            <li>
+                <a href="./views/profile.html"><i class='bx bxs-user-circle'></i></a>
+            </li>
+        </ul>
+    </nav>
 
 </body>
 </html>
