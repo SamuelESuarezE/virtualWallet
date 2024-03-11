@@ -3,5 +3,565 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "SF-Pro-Text-Regular";
+    font-family: "Bold";
+    letter-spacing: 2px;
+}
+
+body, html {
+    width: 100vw;
+    height: 100vh;
+    background: var(--color-background);
+    overflow-x: hidden;
+    z-index: -1;
+    position: absolute;
+}
+
+/* Header */
+
+header {
+    font-size: 0.6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 100%;
+    padding-inline: 20px;
+    color: var(--color-white);
+    overflow: hidden;
+    z-index: 2;
+}
+
+.logoName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    letter-spacing: 2px;
+    z-index: 2;
+
+}
+
+.logoName h1 {
+    font-size: 2em;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.799);
+
+}
+
+header a, header svg {
+    fill: var(--color-white);
+    color: var(--color-white);
+    font-size: 35px;
+    height: 32px;
+    filter: drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.799));
+}
+
+
+.container {
+    height: 82%;
+}
+
+/* Investing Tips */
+
+.tips {
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    gap: 10px;
+}
+
+.tipsCarrusel {
+    display: grid;
+    grid-template-columns: repeat(3, 100%);
+    grid-template-rows: 1fr;
+    width: auto;
+    height: 100%;
+    gap: 10px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.tips h2:first-child {
+    color: var(--color-white);
+    font-size: 1.3em;
+}
+
+.tipsBox img:first-child {
+    height: 100%;
+    object-fit: cover;
+    width: 35%;
+}
+
+.tipsCarrusel :nth-child(3) img:first-child {
+    margin-top: 20px;
+    height: 100%;
+    object-fit: cover;
+    width: 35%;
+}
+
+.tipsBox {
+    margin: 5px;
+    gap: 10px;
+    width: 87vw;
+    border-radius: 20px;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-purple);
+    filter: drop-shadow(0px 0px 3px var(--color-purple));
+    box-shadow: 0px 0px 5px var(--color-purple);
+}
+
+.tipsBox .data {
+    display: flex;
+    letter-spacing: -1px;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.tipsBox .data h2 {
+    font-size: 1em;
+    color: var(--color-white);
+}
+
+.tipsBox .data p {
+    font-size: 14px;
+    color: rgb(186, 186, 186);
+    font-family: "Regular";
+}
+
+.tipsBox .data button {
+    margin-top: 10px;
+    border: none;
+    background-color: var(--color-purple);
+    color: var(--color-white);
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    padding-block: 10px;
+    font-family: "Bold";
+    border-radius: 20px;
+    cursor: pointer;
+    width: 30vw;
+}
+
+
+/* Cards */
+
+.cards {
+    height: 68%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    gap: 10px;
+}
+
+.cards h2:first-child {
+    color: var(--color-white);
+    font-size: 1.3em;
+}
+
+.cards h2:first-child {
+    color: var(--color-white);
+}
+
+.cards span:first-child {
+    color: var(--color-purple);
+}
+
+.carrusel {
+    width: 100%;
+    height: auto;
+    display: flex;
+    overflow: scroll;
+    overflow-y: hidden;
+    gap: 12px;
+    height: 100%;
+}
+
+.card1, .card2 {
+    position: relative;
+    justify-content: space-between;
+    flex: 1 0 auto;
+    background-size: cover;
+    width: 60vw;
+    height: 100%;
+    background-repeat: no-repeat;
+    border-radius: 40px;
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+}
+
+.card1 :nth-child(2), .card2 :nth-child(2) {
+    font-size: 30px;
+    text-shadow: 2px 2px 5px black;
+}
+
+.card1 small, .card2 small {
+    position: absolute;
+    font-family: "Regular";
+    top: 25px;
+    right: 25px;
+    text-shadow: 2px 2px 5px black;
+
+
+}
+
+.card1 span, .card2 span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 5px black;
+}
+
+.card1 img, .card2 img {
+    position: absolute;
+    bottom: 25px;
+    left: 20px;
+    height: 25px;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.58));
+}
+
+.card1 {
+    background-image: url(../storage/img/card.svg);
+}
+
+.card2 {
+    background-image: url(../storage/img/cardLoad.svg);
+
+
+}
+
+.menu {
+    background-color: var(--color-menunav);
+    position: fixed;
+    bottom: 0;
+}
+
+.menu ul {
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu ul li {
+    list-style: none;
+}
+
+.menu ul li a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.menu ul li i {
+    color: var(--color-white);
+    outline: none;
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+
+
+.menu ul li i:hover {
+    color: var(--color-purple);
+    transition: 0.3s ease-in-out;
+}
+
+/* BALANCE */
+
+.containerUp img:first-child {
+    position: absolute;
+    width: 100vw;
+}
+
+.circle {
+    display: grid;
+    place-content: center;
+    margin-top: 5vh;
+    background: var(--color-purple);
+    height: 55vw;
+    width: 55vw;
+    border-radius: 100%;
+    text-align: center;
+    color: #ffff;
+    margin-inline: auto;
+    filter: drop-shadow(0px 0px 10px var(--color-purple));
+
+}
+
+
+.circle p {
+    font-size: 1.8em;
+    width: 180px;
+    text-shadow: 0px 0px 7px black;
+}
+.circle span {
+    font-size: 1.8em;
+    text-shadow: 0px 0px 7px black;
+
+}
+
+.circle dollar {
+    font-size: 0.8em;
+    text-shadow: 0px 0px 7px black;
+
+}
+
+.containerDown {
+    padding-top: 2vh;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Buttons */
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    height: 5vh;
+}
+
+.buttons button{
+    font-family: "Regular";
+    width: 25%;
+    font-size: 1em;
+    border-radius: 20px;
+    background-color: var(--color-white);
+    min-width: 95px;
+
+}
+
+.buttons button:first-child{
+
+    background-color: var(--color-purple);
+    color: var(--color-white);
+    border: 2px solid var(--color-white)
+}
+
+.buttons button:nth-child(2){
+
+    color: var(--color-purple);
+    border: 2px solid var(--color-purple)
+
+}
+.buttons button:last-child{
+
+    color: var(--color-gray);
+    border: 2px solid var(--color-gray)
+
+}
+
+/* Graphic */
+
+.graphic, .graphic img {
+    display: flex;
+    justify-content: center;
+    object-fit: contain;
+    width: 90vw;
+    margin-block: 10px;
+}
+
+/* popUp */
+
+.information {
+    position: relative;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    padding: 15px;
+    padding-bottom: 80px;
+    max-height: 170px;
+    flex: 1;
+    min-height: 100px;
+    background-color: var(--color-purple);
+    color: var(--color-white);
+    box-shadow: 0px 0px 10px var(--color-purple);
+}
+
+.information h2 {
+    font-size: 1.1em;
+}
+
+.information p {
+    font-size: 0.8em;
+}
+
+/* PROFILE */
+
+/* User */
+
+.user {
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 20px;
+    color: var(--color-white);
+}
+
+.user #balanceText {
+    font-family: "Regular";
+    letter-spacing: 2px;
+    font-size: 1.8em;
+}
+
+.user h1 {
+    font-size: 2em;
+}
+
+/* Progress Bars */
+
+.progressBars {
+    margin-top: 20px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.savings, .assets {
+    display: flex;
+    flex-direction: column;
+    font-family: "Regular";
+}
+
+.savings p, .assets p {
+    font-size: 1.5em;
+}
+
+.savings small, .assets small {
+    font-family: "Regular"
+}
+
+dollar {
+    font-size: 0.6em;
+}
+
+.progress {
+    margin-top: 5px;
+    height: 8px;
+    border-radius: 10px;
+    background-color: var(--color-white);
+}
+
+.progressFill1 {
+    border-radius: 10px;
+    height: 100%;
+    width: 80%;
+    background-color: var(--color-purple);
+}
+
+.progressFill2 {
+    border-radius: 10px;
+    height: 100%;
+    width: 40%;
+    background-color: var(--color-gray);
+}
+
+/* activities & transactions */
+
+.activitiesTransactions {
+    flex: 1;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    margin-top: 10px;
+    border-radius: 50px 50px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 95vh;
+    background-color: #Ffff;
+    color: var(--color-background);
+    padding-inline: 30px
+}
+
+
+.activities {
+    flex: 1;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    overflow-x: scroll;
+}
+
+.activity {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    min-height: 120px;
+    box-shadow: 0px 0px 5px rgb(222, 222, 222);
+}
+
+.transactions {
+    box-sizing: border-box;
+    flex: 3;
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    overflow-y: scroll;
+    align-content: start;
+    height: auto;
+    justify-self: center;
+    width: 100%;
+    position: relative;
+}
+
+.transaction {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    height: 80px;
+}
+
+.transactionLeft {
+    display: flex;
+    gap: 5px;
+}
+
+.transaction img{
+
+    width: 50px;
+}
+
+.transactionDescription, .transactionValue{
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    padding: 5px;
+
+}
+
+.transactionValue {
+    align-items: end;
+}
+
+.transactionDescription b, .transactionValue b{
+    font-size: 1.1em;
+}
+
+.transactionDescription small, .transactionValue small{
+    color: var(--color-gray)
+}
+
+#fondoLineas {
+    z-index: -1;
+    position: absolute;
+    object-fit: contain;
+    width: 100vw;
 }
