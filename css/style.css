@@ -265,16 +265,3 @@ header a, header svg {
     color: var(--color-purple);
     transition: 0.3s ease-in-out;
 }
-
-.menu ul li i:hover:after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 42.43%;
-    margin-top: 2px;
-    width: 5px;
-    height: 5px;
-    border-radius: 100%;
-    background-color: var(--color-purple);
-    transition: 0.3s ease-in-out;
-}
