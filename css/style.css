@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "SF-Pro-Text-BOLD";
+    font-family: "Bold";
 }
 
 body {
@@ -11,6 +11,8 @@ body {
     flex-direction: column;
     width: 100vw;
     height: 100vh;
+    max-height: 100vh;
+    background-color: var(--color-background);
 }
 
 .containerUp img:first-child {
@@ -19,38 +21,42 @@ body {
     z-index: -1;
 }
 
+
 /* Header */
 
 header {
     font-size: 0.6em;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     height: 60px;
     width: 100%;
     padding-inline: 20px;
-    color: #ffff;
+    color: var(--color-white);
+    overflow: hidden;
 }
 
 .logoName {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     letter-spacing: 2px;
 }
 
-header a {
-    color: #ffff;;
+.logoName h1 {
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.799);
+
 }
 
-header i {
+header a, header svg {
+    fill: var(--color-white);
+    color: var(--color-white);
     font-size: 35px;
+    height: 32px;
+    filter: drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.799));
 }
 
-header h1 {
-    font-size: 2em;
-}
 /* Circle Balance */
 
 
@@ -58,8 +64,8 @@ header h1 {
 .circle {
     display: grid;
     place-content: center;
-    margin-top: 6vh;
-    background-color: var(--color-primary);
+    margin-top: 5vh;
+    background: var(--color-purple);
     height: 55vw;
     width: 55vw;
     border-radius: 100%;
@@ -73,20 +79,26 @@ header h1 {
 .circle p {
     font-size: 1.8em;
     width: 180px;
+    text-shadow: 0px 0px 7px black;
 }
 .circle span {
     font-size: 1.8em;
+    text-shadow: 0px 0px 7px black;
+
 }
 
 .circle dollar {
     font-size: 0.8em;
+    text-shadow: 0px 0px 7px black;
+
 }
 
 .containerDown {
-    padding-top: 3vh;
+    padding-top: 2vh;
     flex: 1;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -100,25 +112,26 @@ header h1 {
 }
 
 .buttons button{
-    font-family: "SF-Pro-Text-Regular";
+    font-family: "Regular";
     width: 25%;
     font-size: 1em;
     border-radius: 20px;
-    background-color: var(--color-font);
+    background-color: var(--color-white);
+    min-width: 95px;
 
 }
 
 .buttons button:first-child{
 
-    background-color: var(--color-secundary);
-    color: var(--color-font);
-    border: 2px solid var(--color-secundary)
+    background-color: var(--color-purple);
+    color: var(--color-white);
+    border: 2px solid var(--color-white)
 }
 
 .buttons button:nth-child(2){
 
-    color: var(--color-primary);
-    border: 2px solid var(--color-primary)
+    color: var(--color-purple);
+    border: 2px solid var(--color-purple)
 
 }
 .buttons button:last-child{
@@ -131,52 +144,73 @@ header h1 {
 /* Graphic */
 
 .graphic, .graphic img {
+    display: flex;
+    justify-content: center;
     object-fit: contain;
-    width: 100vw;
-    height: 200px;
+    width: 90vw;
+    margin-block: 10px;
 }
 
 /* popUp */
 
-.popUp {
+.information {
     position: relative;
-    display: flex;
-    gap: 10px;
-    align-items: end;
-    padding: 20px;
-    padding-bottom: 80px;
-    max-height: 200px;
-    flex: 1;
-    min-height: 100px;
-    background-color: var(--color-popUp);
-    color: var(--color-secundary);
-    align-items: center;
-}
-
-
-.popUp img:first-child {
-    height: 70%;
-}
-
-.spending {
     display: flex;
     gap: 5px;
     flex-direction: column;
+    padding: 15px;
+    padding-bottom: 80px;
+    max-height: 170px;
+    flex: 1;
+    min-height: 100px;
+    background-color: var(--color-gray);
+    color: var(--color-white);
 }
 
-.spending h3 {
-    font-size: 1.4em;
+.information h2 {
+    font-size: 1.1em;
 }
 
-.spending p {
-    font-family: "SF-Pro-Text-Regular";
-    font-size: 0.92em;
-    color: gray;
+.information p {
+    font-size: 0.8em;
 }
 
-.popUp img:last-child {
-    height: 8vw;
-    right: 15px;
-    top: 15px;
-    position: absolute;
+
+
+.menu {
+    background-color: var(--color-menunav);
+    position: fixed;
+    bottom: 0;
+}
+
+.menu ul {
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu ul li {
+    list-style: none;
+}
+
+.menu ul li a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.menu ul li i {
+    color: var(--color-white);
+    outline: none;
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+
+
+.menu ul li i:hover {
+    color: var(--color-purple);
+    transition: 0.3s ease-in-out;
 }
