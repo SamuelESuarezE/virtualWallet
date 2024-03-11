@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "SF-Pro-Text-Bold";
+    font-family: "Bold";
 }
 
 body {
@@ -11,7 +11,7 @@ body {
     flex-direction: column;
     width: 100vw;
     height: 130vh;
-    background: var(--color-secundary);
+    background: var(--color-background);
     overflow-x: hidden;
     overflow-y: scroll;
 }
@@ -60,11 +60,11 @@ font-size: 35px;
     flex-direction: column;
     gap: 5px;
     padding: 20px;
-    color: var(--color-font);
+    color: var(--color-white);
 }
 
 .user #balanceText {
-    font-family: "SF-Pro-Text-Light";
+    font-family: "Regular";
     letter-spacing: 2px;
     font-size: 2em;
 }
@@ -88,7 +88,7 @@ font-size: 35px;
     display: flex;
     flex-direction: column;
     gap: 5px;
-    font-family: "SF-Pro-Text-Regular";
+    font-family: "Regular";
 }
 
 .savings p, .assets p {
@@ -96,7 +96,7 @@ font-size: 35px;
 }
 
 .savings small, .assets small {
-    font-family: "SF-Pro-Text-Regular"
+    font-family: "Regular"
 }
 
 dollar {
@@ -107,14 +107,14 @@ dollar {
     margin-top: 5px;
     height: 8px;
     border-radius: 10px;
-    background-color: #ffff;
+    background-color: var(--color-white);
 }
 
 .progressFill1 {
     border-radius: 10px;
     height: 100%;
     width: 80%;
-    background-color: var(--color-primary);
+    background-color: var(--color-purple);
 }
 
 .progressFill2 {
@@ -137,7 +137,7 @@ dollar {
     width: 100vw;
     height: 58vh;
     background-color: #Ffff;
-    color: var(--color-secundary);
+    color: var(--color-background);
     padding-inline: 30px
 }
 
@@ -213,4 +213,75 @@ dollar {
 
 .transactionDescription small, .transactionValue small{
     color: var(--color-gray)
+}
+
+.menu {
+    background-color: var(--color-menunav);
+    position: fixed;
+    bottom: 0;
+}
+
+.menu ul {
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu ul li {
+    list-style: none;
+}
+
+.menu ul li a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.menu ul li i {
+    color: var(--color-white);
+    outline: none;
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+
+
+.menu ul li i:hover {
+    color: var(--color-purple);
+    transition: 0.3s ease-in-out;
+}
+
+header {
+    font-size: 0.6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 100%;
+    padding-inline: 20px;
+    color: var(--color-white);
+    overflow: hidden;
+}
+
+.logoName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    letter-spacing: 2px;
+}
+
+.logoName h1 {
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.799);
+
+}
+
+header a, header svg {
+    fill: var(--color-white);
+    color: var(--color-white);
+    font-size: 35px;
+    height: 32px;
+    filter: drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.799));
 }
